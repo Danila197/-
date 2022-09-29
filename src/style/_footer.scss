@@ -3,8 +3,6 @@
 
     // .footer__container
     &__container {    
-        border-radius: 8px;
-        margin-bottom: 10px;
         display: grid;
         grid-template-areas: 
             'logo . '
@@ -28,6 +26,10 @@
     // .footer__contacts
     &__contacts {
         grid-area: contacts;
+
+        p:not(:last-child){
+            margin-bottom: 7px;
+        }
     }
 }
 
