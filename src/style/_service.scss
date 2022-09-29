@@ -1,0 +1,66 @@
+.service {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-areas: 
+        'avatar present price'
+        '. . review'
+        ;
+    grid-template-columns: 50px 1fr max-content;
+    gap: 20px 24px;
+
+    // .service__avatar
+    &__avatar {
+        grid-area: avatar;
+    }
+
+    // .service__present
+    &__present {
+        grid-area: present;
+    }
+
+    // .service__title
+    &__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    // .service__name
+    &__name {
+        font-weight: 300;
+    }
+
+    // .service__price
+    &__price {
+        grid-area: price;
+        font-size: 24px;
+        text-align: right;
+    }
+
+    // .service__review
+    &__review {
+        grid-area: review;
+        display: flex;
+        gap: 16px;
+    }
+
+    // .service__stars
+    &__stars {
+        margin-right: 16px;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+    }
+
+    // .service__star
+    &__star {
+    }
+
+    // .service__count-review
+    &__count-review {
+        padding: 18px;
+        background: url('img/icon-coment.svg') left/14px no-repeat;
+    }
+}
