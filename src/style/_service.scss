@@ -6,10 +6,14 @@
     display: grid;
     grid-template-areas: 
         'avatar present price'
-        '. . review'
+        'contacts contacts review'
         ;
     grid-template-columns: 50px 1fr max-content;
     gap: 20px 24px;
+
+    &_person{
+        gap: 40px 14px;
+    }
 
     // .service__avatar
     &__avatar {
@@ -23,6 +27,7 @@
 
     // .service__title
     &__title {
+        font-weight: 400;
         font-size: 24px;
         margin-bottom: 10px;
     }
@@ -39,19 +44,52 @@
         text-align: right;
     }
 
+    &__contacts{
+        grid-area: contacts;
+        align-self: end;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__link{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        &::before{
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        &_phone::before{
+            background-image: url('img/phone.svg');
+        }
+        &_email::before{
+            background-image: url('img/mail.svg');
+        }
+    }
+
     // .service__review
     &__review {
         grid-area: review;
         display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
         gap: 16px;
     }
 
     // .service__stars
     &__stars {
-        margin-right: 16px;
-        display: flex;
-        gap: 2px;
-        align-items: center;
+        //margin-right: 16px;
+        //display: flex;
+        //gap: 2px;
+        //align-items: center;
     }
 
     // .service__star
@@ -60,7 +98,7 @@
 
     // .service__count-review
     &__count-review {
-        padding: 18px;
+        padding-left: 18px;
         background: url('img/icon-coment.svg') left/14px no-repeat;
     }
 }

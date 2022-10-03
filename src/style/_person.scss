@@ -1,0 +1,27 @@
+.person {
+
+    // .person__service
+    &__service {
+        margin-bottom: 32px;
+    }
+
+    // .person__about
+    &__about {
+        margin-bottom: 32px;
+    }
+
+    // .person__review
+    &__review {
+        margin-bottom: 40px;
+    }
+
+    // .person__form
+    &__form {
+    }
+    &__wrapper-btn{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+    }
+}
