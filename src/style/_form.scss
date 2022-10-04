@@ -6,6 +6,10 @@
         flex-wrap: wrap;
         gap: 16px 12px;
 
+        @include mobile{
+            gap: 8px;
+        }
+
         // .form__fieldset_user
         &_user, &_service{
             margin-bottom: 46px;
@@ -19,12 +23,22 @@
         &_passwords {
             margin-bottom: 36px;
         }
+
+        &_add{
+            margin-bottom: 32px;
+        }
     }
+
     
     &__wrapper-btn{
         min-height: 114px;
         display: flex;
         justify-content: space-between;
+
+        @include mobile{
+            flex-direction: column;
+            gap: 32px;
+        }
     }
 
     &__submit {
@@ -40,15 +54,28 @@
         &_sign-in{
             margin-left: auto;
         }
+
+        @include mobile{
+            font-size: 14px;
+        }
     }
 
     // .form__label
     &__label {
         width:310px;
-    }
-    &__label_add{
-        display: inline-block;
-        width: 310px
+
+        &_add{
+            display: inline-block;
+            width: 310px
+        }
+
+        &_textarea{
+            width: 100%;
+        }
+        @include mobile{
+            width: 100%;
+            font-size: 14px;
+        }
     }
 
     // .form__text
@@ -120,41 +147,16 @@
             background-image: url('img/eye-open.svg');
         }
     }
-
-    // .form__avatar
-
-    &__avatar {
-    }
-
-    // .form__submit
-
-}
-.form-sign-up {
-}
-.avatar {
-
-    // .avatar__label
-
-    &__label {
-    }
-
-    // .avatar__text
-
-    &__text {
-    }
-
-    // .avatar__input-wrapper
-
-    &__input-wrapper {
-    }
-
-    // .avatar__input
-
-    &__input {
-    }
-
-    // .avatar__result
-
-    &__result {
+    
+    &__wrapper-btn-add{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px 24px;
+        
+        @include mobile{
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
     }
 }

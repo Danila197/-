@@ -6,21 +6,43 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 20px 30px;
+
+        @include tablet{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
     }
     // .header__logo
     &__logo {
-        margin-right: 88px;
+        margin-right: 58px;
+
+        @include laptop{
+            margin-right: 38px;
+        }
+        @include tablet{
+            margin-right: 0px;
+        }
     }
 
     // .header__search
     &__search {
         margin-right: auto;
+
+        @include tablet{
+            order: 1;
+        }
     }
 
     // .header__auth
     &__auth {
         display: flex;
         gap: 40px;
+
+        @include laptop{
+            gap: 30px;    
+        }
     }
 
     // .header__auth-btn
@@ -35,6 +57,11 @@
         }
         &:active{
             color: #ffd600;
+        }
+
+        @include mobile{
+            font-size: 0;
+            gap: 0px;
         }
     }
 }

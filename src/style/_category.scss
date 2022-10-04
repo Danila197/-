@@ -5,11 +5,15 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 24px;
+        width: 180px;
     }
-
     // .category__list
     &__list {
+        padding-top: 24px;
+
+        @include tablet{
+            display: none;
+        }
     }
 
     // .category__item

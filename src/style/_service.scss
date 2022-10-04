@@ -11,6 +11,15 @@
     grid-template-columns: 50px 1fr max-content;
     gap: 20px 24px;
 
+    @include mobile{
+        grid-template-areas: 
+        'avatar . price'
+        'present present review'
+        'contacts contacts contacts';
+        padding: 16px;
+        gap: 8px;
+    }
+
     &_person{
         gap: 40px 14px;
     }
@@ -30,11 +39,20 @@
         font-weight: 400;
         font-size: 24px;
         margin-bottom: 10px;
+        
+        @include mobile{
+            margin-bottom: 17px;
+            font-size: 18px;
+        }
     }
 
     // .service__name
     &__name {
         font-weight: 300;
+
+        @include mobile{
+            font-size: 14px;
+        }
     }
 
     // .service__price
@@ -42,6 +60,12 @@
         grid-area: price;
         font-size: 24px;
         text-align: right;
+        
+        @include mobile{
+            font-size: 18px;
+            padding-top: 8px;
+            padding-right: 8px;
+        }
     }
 
     &__contacts{
@@ -50,6 +74,11 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+        font-weight: 300;
+
+        @include mobile{
+            font-size: 14px;
+        }
     }
 
     &__link{
@@ -82,14 +111,15 @@
         justify-content: flex-end;
         align-items: flex-end;
         gap: 16px;
+
+        @include mobile{
+            gap: 8px;
+        }
     }
 
     // .service__stars
     &__stars {
-        //margin-right: 16px;
-        //display: flex;
-        //gap: 2px;
-        //align-items: center;
+        line-height: 0;
     }
 
     // .service__star
@@ -100,5 +130,9 @@
     &__count-review {
         padding-left: 18px;
         background: url('img/icon-coment.svg') left/14px no-repeat;
+
+        @include mobile{
+            font-size: 14px;
+        }
     }
 }

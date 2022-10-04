@@ -6,14 +6,25 @@
         display: grid;
         grid-template-areas: 
             'logo . '
-            'copyright contacts'
-            ;
+            'copyright contacts';
         gap: 14px;
+
+        @include mobile{
+            grid-template-areas: 
+            'logo'
+            'contacts'
+            'copyright';
+
+            gap: 0;
+        }
     }
 
     // .footer__logo
     &__logo {
         grid-area: logo;
+        @include mobile{
+            margin-bottom: 44px;
+        }
     }
 
     // .footer__copyright
@@ -29,6 +40,11 @@
 
         p:not(:last-child){
             margin-bottom: 7px;
+        }
+
+        @include mobile{
+            justify-self: start;
+            margin-bottom: 33px;
         }
     }
 }
