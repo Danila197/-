@@ -41,6 +41,10 @@
             padding: 24px 20px 48px;
             max-width: 678px;
         }
+        @include mini{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
     
     // .modal__container
